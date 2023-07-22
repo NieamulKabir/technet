@@ -6,7 +6,7 @@ function App() {
     <div>
       <Toaster />
       <MainLayout />
-      <MainLayout />
+      
     </div>
   );
 }
