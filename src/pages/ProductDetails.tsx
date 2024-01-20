@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import ProductReview from '@/components/ProductReview';
 import { Button } from '@/components/ui/button';
 import { useSingleProductQuery } from '@/redux/features/products/productApi';
@@ -7,15 +8,12 @@ export default function ProductDetails() {
   const { id } = useParams();
 
   const {
-    data: product,
-    isLoading,
-    isError,
-    error,
+    data: product
   } = useSingleProductQuery(id);
 
   return (
     <>
-      <div className="flex max-w-7xl mx-auto items-center border-b border-gray-300">
+      <div className="flex max-w-7xl mx-auto items-center border-b border-gray-300"> 
         <div className="w-[50%]">
           <img src={product?.image} alt="" />
         </div>

@@ -12,7 +12,11 @@ export default function PrivateRoute({ children }: IProps) {
   const { pathname } = useLocation();
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div>
+        <p>Loading</p>
+      </div>
+    );
   }
 
   if (!user.email && !isLoading) {
