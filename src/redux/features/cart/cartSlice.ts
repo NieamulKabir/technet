@@ -20,6 +20,7 @@ const carSlice = createSlice({
         (product) => product._id === action.payload._id
       );
       if (existing) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         existing.quantity = existing.quantity! + 1;
       } else {
         state.products.push({ ...action.payload, quantity: 1 });
@@ -30,7 +31,9 @@ const carSlice = createSlice({
       const existing = state.products.find(
         (product) => product._id === action.payload._id
       );
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       if (existing && existing.quantity! > 1) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         existing.quantity = existing.quantity! - 1;
       } else {
         state.products = state.products.filter(
@@ -44,6 +47,7 @@ const carSlice = createSlice({
         (product) => product._id !== action.payload._id
       );
       state.total =
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         state.total - action.payload.price * action.payload.quantity!;
     },
   },
