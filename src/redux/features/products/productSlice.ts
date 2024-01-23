@@ -9,7 +9,7 @@ const initialState: IProduct = {
   status: false,
   priceRange: 150,
 };
-
+  
 const productSlice = createSlice({
   name: 'product',
   initialState,

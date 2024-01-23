@@ -26,14 +26,14 @@ const routes = createBrowserRouter([
         path: '/product-details/:id',
         element: <ProductDetails />,
       },
-      {
-        path: '/checkout',
-        element: (
-          <PrivateRoute>
-            <Checkout />
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: '/checkout',
+      //   element: (
+      //     <PrivateRoute>
+      //       <Checkout />
+      //     </PrivateRoute>
+      //   ),
+      // },
     ],
   },
   {
